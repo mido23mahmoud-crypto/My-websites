@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adidas</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#111;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    background:rgba(255,255,255,0.08);
+    border-radius:20px;
+    padding:30px;
+    position:relative;
+    overflow:hidden;
+}
+
+/* Navbar */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:white;
+    font-size:32px;
+    font-weight:bold;
+    letter-spacing:3px;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+}
+
+/* Hero */
+
+.content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    min-height:75vh;
+}
+
+.text{
+    width:45%;
+    color:white;
+    z-index:2;
+}
+
+.text h1{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.text p{
+    color:#ddd;
+    line-height:1.8;
+}
+
+.image{
+    width:45%;
+    text-align:center;
+    z-index:2;
+}
+
+.image img{
+    width:450px;
+    max-width:100%;
+}
+
+/* Circle */
+
+.circle{
+    width:700px;
+    height:700px;
+    background:red;
+    border-radius:50%;
+    position:absolute;
+    right:-300px;
+    bottom:-300px;
+}
+
+/* Tablet */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .content{
+        flex-direction:column;
+        text-align:center;
+        padding-top:40px;
+    }
+
+    .text{
+        width:100%;
+    }
+
+    .text h1{
+        font-size:36px;
+    }
+
+    .image{
+        width:100%;
+        margin-top:30px;
+    }
+
+    .image img{
+        width:280px;
+    }
+
+    .circle{
+        width:450px;
+        height:450px;
+        right:-180px;
+        bottom:-180px;
+    }
+}
+
+/* Mobile */
+
+@media(max-width:480px){
+
+    .text h1{
+        font-size:28px;
+    }
+
+    .text p{
+        font-size:14px;
+    }
+
+    nav ul{
+        gap:10px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .image img{
+        width:220px;
+    }
+
+    .circle{
+        width:320px;
+        height:320px;
+        right:-130px;
+        bottom:-130px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <nav>
+        <div class="logo">ADIDAS</div>
+
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">WOMEN</a></li>
+            <li><a href="#">KIDS</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+
+        <div class="text">
+            <h1>
+                Welcome to Adidas Egypt,
+                Your Favorite Sportswear Brand
+            </h1>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Laborum deserunt
+                cumque iste facilis magni repellendus.
+            </p>
+        </div>
+
+        <div class="image">
+            <img src="shoes.png" alt="Adidas Shoe">
+        </div>
+
+    </div>
+
+    <div class="circle"></div>
+
+</div>
+
+</body>
+</html>
